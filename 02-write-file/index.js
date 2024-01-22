@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 const { stdin, stdout } = process; 
 
-const file = path.dirname(__filename) + \\text.txt;
+const file = path.dirname.join(__filename, "text.txt");
 const output = fs.createWriteStream(file);
 
 process.on("exit", () => stdout.write("Thank you! Good bye"));
